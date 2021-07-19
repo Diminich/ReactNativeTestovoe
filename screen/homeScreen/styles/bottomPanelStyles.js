@@ -7,7 +7,7 @@ export const bottomPanelStyles = StyleSheet.create({
         justifyContent: 'flex-end',
         backgroundColor: '#317AE8',
         borderRadius: 20,
-        elevation: 4,        
+        // elevation: 4,
     },
 
     wrapperDescriptionText: {

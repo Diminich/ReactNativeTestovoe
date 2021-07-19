@@ -5,7 +5,7 @@ import { bottomPanelStyles } from '../styles/bottomPanelStyles';
 const BottomPanel = () => {
     return (
         <View style={bottomPanelStyles.wrapper}>
-            <Image style={bottomPanelStyles.img} source={require('./../imgs/1.png')} />
+            <Image style={bottomPanelStyles.img} source={require('./../../../imgs/1.png')} />
             <View style={bottomPanelStyles.wrapperDescriptionText}>
                 <Text style={bottomPanelStyles.headingText}>Need for speed</Text>
                 <Text style={bottomPanelStyles.productText}>UdoDron 3 Pro</Text>

@@ -22,7 +22,7 @@ export const viewProductsStyles = StyleSheet.create({
     },
 
     contentProduct: {
-        height: '95%',
+        height: '100%',
         alignItems: 'center',
         borderRadius: 12,
         borderWidth: 1,

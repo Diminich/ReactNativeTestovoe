@@ -1,5 +1,5 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux';
-import thunkMiddleware from 'redux-thunk'
+import thunkMiddleware from 'redux-thunk';
 import quadcopterReducer from './quadcopter-reducer';
 
 
