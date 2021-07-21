@@ -4,7 +4,7 @@ import Svg, { Path } from "react-native-svg";
 
 export const viewProductsStyles = StyleSheet.create({
     wrapper: {
-        height: '40%',
+        height: '50%',
         width: '90%'
     },
 

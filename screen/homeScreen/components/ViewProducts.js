@@ -4,25 +4,25 @@ import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { useSelector } from 'react-redux';
 import { StarSvgIcon, viewProductsStyles } from '../styles/viewProductsStyles';
 
-const ViewProducts = ({ navigation }) => {
+const ViewProducts = ({ navigation, sortProducts }) => {
     const nameButton = useSelector(state => state.quadcopterPage.activeNameButton);
-    const sortProducts = useSelector(state => state.quadcopterPage.sortProducts);
 
     return (
         <View style={viewProductsStyles.wrapper}>
             <Text style={viewProductsStyles.textHeaderProduct}>{nameButton} Quadcopters</Text>
             <View style={viewProductsStyles.wrapperProducts}>
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-                    {sortProducts.map(({ id, img, nameProduct, priceProduct, ratingProduct }) => {
+                    {sortProducts.map(({ id, img, nameProduct, priceProduct, ratingProduct, descriptionProduct }) => {
                         return (
                             <TouchableOpacity
+                                key={id}
                                 onPress={() => navigation.navigate("StackNavigator", {
                                     params: {
-                                        item: {id, img, nameProduct, priceProduct, ratingProduct}
+                                        item: { id, img, nameProduct, priceProduct, descriptionProduct }
                                     },
                                     screen: "ProductDescription",
                                 })}>
-                                <View style={viewProductsStyles.contentProduct} key={id}>
+                                <View style={viewProductsStyles.contentProduct} >
                                     <Image style={viewProductsStyles.imgQuadcopter} source={img} />
                                     <Text style={viewProductsStyles.nameProduct}>{nameProduct}</Text>
                                     <View style={viewProductsStyles.wrapperPriceRatingProduct}>

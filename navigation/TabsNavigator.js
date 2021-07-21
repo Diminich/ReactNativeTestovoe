@@ -24,14 +24,14 @@ const TabsNavigator = () => (
     <Tab.Navigator
       tabBarOptions={{
         style: {
-          height: '8%',
+          height: '10%',
           backgroundColor: '#FFFFFF',
           borderTopLeftRadius: 20,
           borderTopRightRadius: 20,
         }
       }}
     >
-      <Tab.Screen name='home' component={HomeScreen} options={getIcon('home')} />
+      <Tab.Screen name='Quadrojoy' component={HomeScreen} options={getIcon('home')} />
       <Tab.Screen name='heart' component={HeartScreen} options={getIcon('hearto')} />
       <Tab.Screen name='loupe' component={LoupeScreen} options={getIcon('search1')} />
       <Tab.Screen name='shoppingCart' component={ShoppingCartScreen} options={getIcon('shoppingcart')} />

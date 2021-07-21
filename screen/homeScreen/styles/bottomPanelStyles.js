@@ -2,12 +2,11 @@ import { StyleSheet } from 'react-native';
 
 export const bottomPanelStyles = StyleSheet.create({
     wrapper: {
-        height: '25%',
+        height: '35%',
         width: '90%',
         justifyContent: 'flex-end',
         backgroundColor: '#317AE8',
-        borderRadius: 20,
-        // elevation: 4,
+        borderRadius: 20
     },
 
     wrapperDescriptionText: {
@@ -41,7 +40,7 @@ export const bottomPanelStyles = StyleSheet.create({
     },
 
     img: {
-        height: '90%',
+        height: '95%',
         width: '90%',
         position: 'relative',
         top: 52,

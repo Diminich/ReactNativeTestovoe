@@ -1,5 +1,6 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
+import { FontAwesome } from '@expo/vector-icons';
 import {
     getFocusedRouteNameFromRoute,
     NavigationContainer
@@ -11,10 +12,14 @@ import TabsNavigator from "./TabsNavigator";
 const RootStack = createStackNavigator();
 
 const getHeaderTitle = (route) => {
-    const routeName = getFocusedRouteNameFromRoute(route) ?? "home";
-   
+    const routeName = getFocusedRouteNameFromRoute(route) ?? "Quadrojoy";
     return routeName
-  };
+};
+
+  const getIconHeaderRight = () => (
+    //   <Button />
+  <FontAwesome name="list-ol" size={24} color="black" style={{marginRight: 20}}/>
+  )
 
 const NavigationProvider = () => {
     return (
@@ -29,7 +34,7 @@ const NavigationProvider = () => {
                     options={{ headerShown: false }}
                     initialParams={{
                         item: null
-                      }}
+                    }}
                 />
                 <RootStack.Screen
                     component={TabsNavigator}
@@ -37,8 +42,15 @@ const NavigationProvider = () => {
                     options={({ route }) => ({
                         headerLeft: null,
                         headerTitle: getHeaderTitle(route),
-                        headerTitleAlign: "left"
-                      })}
+                        headerTitleAlign: "left",
+                        headerStyle: {
+                            backgroundColor: '#F8F8F8',
+                            shadowColor: 'transparent',
+                            elevation: 0
+                        },
+                        headerTitleStyle: {marginLeft: 3},
+                        headerRight: () => getIconHeaderRight()
+                    })}
                 />
             </RootStack.Navigator>
         </NavigationContainer>

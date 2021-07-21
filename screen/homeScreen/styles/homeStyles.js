@@ -5,6 +5,7 @@ export const homeStyles = StyleSheet.create({
       flex: 1,
       flexDirection: 'column',
       justifyContent: 'space-around',
-      alignItems: 'center'
-    },
+      alignItems: 'center',
+      backgroundColor: '#F8F8F8'
+    }
   });
